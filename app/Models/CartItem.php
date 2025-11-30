@@ -22,4 +22,9 @@ class CartItem extends Model
         'unit_price' => 'decimal:2',
         'line_total' => 'decimal:2',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
